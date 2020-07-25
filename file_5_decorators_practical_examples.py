@@ -54,5 +54,6 @@ def display_info_slowly(name, age):
     print("display_info_slowly ran with arguments: ({}, {})".format(name, age))
 
 
-display_info("John", 25)  # This creates a `display_info.log` file.
-display_info_slowly("Jane", 30)
+if __name__ == "__main__":
+    display_info("John", 25)  # This creates a `display_info.log` file.
+    display_info_slowly("Jane", 30)
