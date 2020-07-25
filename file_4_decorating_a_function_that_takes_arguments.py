@@ -13,4 +13,6 @@ def display_info(name, age):
 
 if __name__ == "__main__":
     display_info("John", 25)
-    print(display_info.__name__)  # outputs `wrapper_function`
+    print(display_info.__name__)  # outputs `wrapper_function` ...
+    # ... - the comment at the bottom of file_6_chaining_decorator.py explains how to
+    # fix this.
