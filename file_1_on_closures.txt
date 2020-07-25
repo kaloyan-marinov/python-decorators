@@ -1,0 +1,3 @@
+in simple terms, a closure is an inner function
+that remembers and has access to variables in the local scope in which it was created -
+even after the outer function has finished executing
