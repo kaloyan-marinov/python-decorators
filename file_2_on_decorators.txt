@@ -1,6 +1,10 @@
 a decorator is just a function that:
     1. takes another function as an argument,
-    2. adds some kind of functionality,
-    3. and returns another function
+    2. "wraps the original function", which could mean:
+        (a) "adds some kind of functionality"
+        (b) "modifies behaviour"
+        (c) "performs setup/teardown"
+        (d) "minotors diagnostics (timing, etc)"
+    3. and returns a newly-created function
 (all of this without altering the source code of the original function that was taken as
-argument)
+an argument)

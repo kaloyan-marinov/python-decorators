@@ -19,7 +19,8 @@ display_info("Jane", 30)  # outputs ...
     ```
 
 Q: Why does it say "wrapper_function" instead of "display_info"?
-A: Realize that the chaining those 2 decorators above the definition of `display_info`
+A: Realize that
+   the chaining of those 2 decorators above the definition of `display_info`
    is equivalent to writing
    `display_info = my_timer(my_logger(display_info))`
 

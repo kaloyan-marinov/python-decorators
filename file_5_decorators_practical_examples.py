@@ -8,7 +8,8 @@ Probably one of the more common use cases for decorators in Python is logging.
 def my_logger(orig_func):
     """
     This is a decorator.
-    It helps keep track of what argument the decorated function is run with.
+    When applied to a(nother) function,
+    this decorator helps keep track of what argument the decorated function is run with.
     """
     import logging
 
@@ -26,7 +27,8 @@ def my_logger(orig_func):
 def my_timer(orig_func):
     """
     This is a decorator.
-    It helps time how long a decoratored function takes to run.
+    When applied to a(nother) function,
+    this decorator helps time how long the decoratored function takes to run.
     """
     import time
 
