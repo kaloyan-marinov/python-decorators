@@ -4,58 +4,67 @@ Probably one of the more common use cases for decorators in Python is logging.
 '''
 # fmt: on
 
+import logging
+import time
 
-def my_logger(orig_func):
+
+def input_params_logging(orig_func):
     """
     This is a decorator.
     When applied to a(nother) function,
-    this decorator helps keep track of what argument the decorated function is run with.
+    this decorator helps keep track of what inputs the decorated function is run with.
     """
-    import logging
 
     logging.basicConfig(
-        filename="{}.log".format(orig_func.__name__), level=logging.INFO
+        # filename=orig_func.__name__ + ".log",
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        level=logging.INFO,
     )
 
     def wrapper_function(*args, **kwargs):
-        logging.info("Ran with args: {}, and kwargs: {}".format(args, kwargs))
+        logging.info(f"going to execute with args: {args}, and kwargs: {kwargs}")
         return orig_func(*args, **kwargs)
 
     return wrapper_function
 
 
-def my_timer(orig_func):
+def execution_time_printing(orig_func):
     """
     This is a decorator.
     When applied to a(nother) function,
     this decorator helps time how long the decoratored function takes to run.
     """
-    import time
 
     def wrapper_function(*args, **kwargs):
-        t1 = time.time()
+        print(f"starting `{orig_func.__name__}`'s execution")
+
+        start_time = time.time()
         result = orig_func(*args, **kwargs)
-        t2 = time.time() - t1
-        print("{} ran in: {} sec".format(orig_func.__name__, t2))
+        final_time = time.time()
+
+        delta_t = final_time - start_time
+        print(f"ending `{orig_func.__name__}`'s execution - it took {delta_t} sec")
         return result
 
     return wrapper_function
 
 
-@my_logger
+@input_params_logging
 def display_info(name, age):
-    print("display_info ran with arguments ({}, {})".format(name, age))
+    print(f"executing *display_info* with the following inputs: ({name}, {age})")
 
 
-import time
-
-
-@my_timer
-def display_info_slowly(name, age):
+@execution_time_printing
+def display_info_and_sleep(name, age):
+    print(
+        f"executing *display_info_and_sleep* with the following inputs: ({name}, {age})"
+    )
     time.sleep(1)
-    print("display_info_slowly ran with arguments: ({}, {})".format(name, age))
 
 
 if __name__ == "__main__":
-    display_info("John", 25)  # This creates a `display_info.log` file.
-    display_info_slowly("Jane", 30)
+    # If the call of `logging.basicConfig` above provides a value for `filename`,
+    # then the next statement creates a `display_info.log` file.
+    display_info("John", 50)
+
+    display_info_and_sleep("Mary", 50)

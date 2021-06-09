@@ -17,7 +17,7 @@ The following is based on [1] and [3]:
 
 Each of the following is based on [2]:
 - `file_3_decorators_demystified.py`
-- `file_4_decorating_a_function_that_takes_arguments.py.py`
+- `file_4_decorating_a_function_that_takes_arguments.py`
 - `file_5_decorators_practical_examples.py`
 - `file_6_chaining_decorators.py`
 
