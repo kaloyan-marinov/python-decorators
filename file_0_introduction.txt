@@ -1,0 +1,9 @@
+Recall that, in Python:
+
+    (a) functions are first-class citizens
+        (i.e. it is (perfectly) possible for a function to
+        take 1 or several functions as input
+        and/or return 1 or several functions as output)
+
+    (b) functions can be defined within other functions
+
