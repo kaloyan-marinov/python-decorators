@@ -22,7 +22,10 @@ Each of the following is based on [2]:
 - `file_6_chaining_decorators.py`
 
 The following is based on [4]:
-- `file_7_decorating_a_class.py`
+- `file_7_1_decorating_a_class.py`
+
+The following is based on [5]:
+- `file_7_2_dataclass_decorator.py`
 
 # Bibliography
 
@@ -35,3 +38,5 @@ which can be found at https://www.youtube.com/watch?v=FsAPt_9Bf3U
 3. The "Decorators: A Powerful Weapon in Your Python Arsenal" talk by Colton Myers, which can be found at https://speakerdeck.com/pycon2014/decorators-a-powerful-weapon-in-your-python-arsenal-by-colton-myers?slide=10
 
 4. `anthonywritescode`'s video called "python: decorating a class (intermediate) anthony explains #194", which can be found at https://www.youtube.com/watch?v=xwsgV3yAtmw
+
+5. `ArjanCodes`'s video called "If you're not using Python DATA CLASSES yet, you should 🚀", which can be found at https://www.youtube.com/watch?v=vRVVyl9uaZc
