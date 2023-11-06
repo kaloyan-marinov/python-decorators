@@ -10,7 +10,7 @@ $ . venv/bin/activate
 # Overview
 
 The following is based on [1]:
-- `file_1_on_closures.txt`
+- `file_1_1_on_closures.txt`
 
 The following is based on [1] and [3]:
 - `file_2_on_decorators.txt`
